@@ -1,0 +1,24 @@
+:root {
+	--accent: 136, 58, 234;
+	--accent-light: 224, 204, 250;
+	--accent-dark: 49, 10, 101;
+}
+
+.rounded-none {
+	border-radius: 0px;
+}
+.rounded-min {
+	border-radius: 8px;
+}
+.rounded-med {
+	border-radius: 16px;
+}
+.rounded-full {
+	border-radius: 50px;
+}
+.material-symbols-outlined {
+	font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+h3 {
+	font-size: 39px;
+}
