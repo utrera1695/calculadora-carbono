@@ -46,7 +46,6 @@
 	}
 	label {
 		font-size: 14px;
-		font-family: "Roboto", sans-serif;
 		margin: 0.5rem 0px;
 	}
 	label.required::after {

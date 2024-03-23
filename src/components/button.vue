@@ -22,7 +22,6 @@
 	button {
 		font-weight: bold;
 		padding: 10px 1rem;
-		font-family: "Montserrat", sans-serif;
 		font-size: 16px;
 		cursor: pointer;
 		display: flex;
@@ -46,7 +45,7 @@
 		transform: scale(0.95);
 	}
 	.border {
-		color: var(--color);
+		color: v-bind("color");
 		background-color: white;
 		border: 2px solid v-bind("color");
 	}

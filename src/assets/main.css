@@ -1,9 +1,6 @@
-:root {
-	--accent: 136, 58, 234;
-	--accent-light: 224, 204, 250;
-	--accent-dark: 49, 10, 101;
+body {
+	margin: 0px;
 }
-
 .rounded-none {
 	border-radius: 0px;
 }
@@ -21,4 +18,44 @@
 }
 h3 {
 	font-size: 39px;
+}
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	.container {
+		flex-direction: column;
+	}
+	h3 {
+		font-size: 22px;
+	}
+	.logo img {
+		width: 14rem;
+	}
+	.result-container {
+		flex-direction: column;
+	}
+	button {
+		width: 100%;
+	}
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+	.container {
+		flex-direction: column;
+	}
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+	.container {
+		flex-direction: column;
+	}
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
 }

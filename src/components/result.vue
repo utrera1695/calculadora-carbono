@@ -4,11 +4,9 @@
 	import Card from "./card.vue";
 	import { useRoute, useRouter } from "vue-router";
 	const { query } = useRoute();
-	const cardColors = query.cardColors ? "#" + query.buttonVariant : "#f8ae53";
-	const cardRounded = query.cardRounded
-		? "#" + query.buttonVariant
-		: "rounded-med";
-	const cardVariant = query.cardVariant ? "#" + query.buttonVariant : "smooth";
+	const cardColors = query.cardColors ? "#" + query.cardColors : "#f8ae53";
+	const cardRounded = query.cardRounded || "rounded-med";
+	const cardVariant = query.cardVariant || "smooth";
 </script>
 <template>
 	<div class="result-container" id="result-container">

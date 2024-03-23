@@ -60,7 +60,7 @@
 		transition: --percent 1s;
 		--temp: calc(var(--percent) * 100);
 		--v1: max(var(--percent) - 0.5, 0);
-		--v2: max((var(--percent) - var(--v1)) * 100 - 0.5, 0);
+		--v2: max((var(--percent) - var(--v1)) * 100, 0);
 		counter-reset: v1 var(--v1) v2 var(--v2);
 		color: v-bind("color");
 		font-weight: bold;

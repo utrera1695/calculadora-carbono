@@ -14,20 +14,12 @@
 	const buttonColors = query.buttonColors
 		? "#" + query.buttonColors
 		: "#f8ae53";
-	const buttonRounded = query.buttonRounded
-		? "#" + query.buttonRounded
-		: "rounded-med";
-	const buttonVariant = query.buttonVariant
-		? "#" + query.buttonVariant
-		: "solid";
+	const buttonRounded = query.buttonRounded || "rounded-med";
+	const buttonVariant = query.buttonVariant || "solid";
 
-	const inputColor = query.inputColor ? "#" + query.buttonVariant : "#f8ae53";
-	const inputRounded = query.inputRounded
-		? "#" + query.buttonVariant
-		: "rounded-med";
-	const inputVariant = query.inputVariant
-		? "#" + query.buttonVariant
-		: "outline";
+	const inputColor = query.inputColor ? "#" + query.inputColor : "#f8ae53";
+	const inputRounded = query.inputRounded || "rounded-med";
+	const inputVariant = query.inputVariant || "outline";
 	const data = reactive({
 		distancia: "",
 		personas: "",
@@ -55,8 +47,12 @@
 		if (precioValue)
 			precioValue.style.setProperty(
 				"--percent",
-				(result * CO2TOPRICE).toFixed(2)
+				(result * CO2TOPRICE).toFixed(2).toString()
 			);
+		console.log((result * CO2TOPRICE).toFixed(2));
+		const position = document.getElementById("result-container")?.offsetTop;
+		// smooth scroll
+		window.scrollTo({ top: position, behavior: "smooth" });
 	};
 </script>
 
