@@ -27,6 +27,24 @@
 		combustible: 0,
 		viajes: 0,
 	});
+	const animateValue = (
+		obj: any,
+		start: number,
+		end: number,
+		icon: string,
+		duration: 1000
+	) => {
+		let startTimestamp: any = null;
+		const step = (timestamp: any) => {
+			if (!startTimestamp) startTimestamp = timestamp;
+			const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+			obj.innerHTML = (progress * (end - start) + start).toFixed(2) + icon;
+			if (progress < 1) {
+				window.requestAnimationFrame(step);
+			}
+		};
+		window.requestAnimationFrame(step);
+	};
 	const calculateData = (e: any) => {
 		e.preventDefault();
 		const cottage_consume = 9;
@@ -42,14 +60,22 @@
 		document.getElementById("result-container")?.classList.add("show");
 		console.log(result);
 		if (co2Value) {
-			co2Value.style.setProperty("--percent", result.toFixed(2));
+			animateValue(
+				co2Value,
+				parseFloat(co2Value.textContent || "0.00"),
+				result,
+				"",
+				1000
+			);
 		}
 		if (precioValue)
-			precioValue.style.setProperty(
-				"--percent",
-				(result * CO2TOPRICE).toFixed(2).toString()
+			animateValue(
+				precioValue,
+				parseFloat(precioValue.textContent || "0.00"),
+				result * CO2TOPRICE,
+				"€",
+				1000
 			);
-		console.log((result * CO2TOPRICE).toFixed(2));
 		const position = document.getElementById("result-container")?.offsetTop;
 		// smooth scroll
 		window.scrollTo({ top: position, behavior: "smooth" });

@@ -57,17 +57,17 @@
 	}
 	.card span {
 		font-size: 3rem;
-		transition: --percent 1s;
+		/* transition: --percent 1s;
 		--temp: calc(var(--percent) * 100);
 		--v1: max(var(--percent) - 0.5, 0);
 		--v2: max((var(--percent) - var(--v1)) * 100, 0);
-		counter-reset: v1 var(--v1) v2 var(--v2);
+		counter-reset: v1 var(--v1) v2 var(--v2); */
 		color: v-bind("color");
 		font-weight: bold;
 	}
-	.card span::before {
+	/* .card span::before {
 		content: counter(v1) "." counter(v2, decimal-leading-zero);
-	}
+	} */
 	.card img {
 		width: 5rem;
 		margin-bottom: 1rem;

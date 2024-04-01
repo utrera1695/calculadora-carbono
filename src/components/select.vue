@@ -1,5 +1,8 @@
 <script setup lang="ts">
 	import { computed, reactive } from "vue";
+	import { useRoute, useRouter } from "vue-router";
+	const { query } = useRoute();
+	const font = query.font || "Poppins";
 	const {
 		title,
 		inputName,
@@ -39,6 +42,12 @@
 </template>
 
 <style scoped>
+	label,
+	select,
+	button,
+	input {
+		font-family: v-bind("font"), sans-serif;
+	}
 	.select-group {
 		display: grid;
 		margin: 1rem 0px;
