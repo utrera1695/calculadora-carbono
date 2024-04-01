@@ -8,13 +8,13 @@
 
 <template>
 	<main>
-		<div class="logo">
+		<!-- <div class="logo">
 			<img src="@/assets/logo-cabanas.png" alt="logo cabanas" />
 		</div>
 		<h3>
 			Cabañas en árboles te ayuda a saber la huella de carbono que se produce en
 			tus viajes
-		</h3>
+		</h3> -->
 		<div class="container">
 			<Form />
 			<Result />
