@@ -4,7 +4,7 @@ import HomeView from "./Home.vue";
 
 const routes = [
 	{
-		path: "/calculadora",
+		path: "/calculadora-base",
 		component: HomeView,
 	},
 ];
