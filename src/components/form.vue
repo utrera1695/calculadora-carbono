@@ -25,7 +25,7 @@
 		personas: "",
 		noches: "",
 		combustible: 0,
-		viajes: 0,
+		viajes: "0",
 	});
 	const animateValue = (
 		obj: any,
@@ -48,17 +48,24 @@
 	const calculateData = (e: any) => {
 		e.preventDefault();
 		const cottage_consume = 9;
-		const result =
-			cottage_consume * parseInt(data.noches) * parseInt(data.personas) +
-			(data.viajes + 1) *
-				parseInt(data.distancia) *
-				parseInt(data.personas) *
-				COMBUSTIBLE_VALUES[data.combustible];
-
+		const viajes = parseInt(data.viajes) + 1;
+		const result1 =
+			cottage_consume * parseInt(data.noches) * parseInt(data.personas);
+		const result2 =
+			viajes *
+			parseFloat(data.distancia) *
+			parseFloat(data.personas) *
+			COMBUSTIBLE_VALUES[data.combustible];
+		const result = result1 + result2;
 		const co2Value = document.getElementById("co2_value");
 		const precioValue = document.getElementById("precio_value");
 		document.getElementById("result-container")?.classList.add("show");
-		console.log(result);
+		console.log(
+			viajes,
+			parseFloat(data.distancia),
+			parseFloat(data.personas),
+			COMBUSTIBLE_VALUES[data.combustible]
+		);
 		if (co2Value) {
 			animateValue(
 				co2Value,

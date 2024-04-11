@@ -12,8 +12,8 @@
 			<img src="@/assets/logo-cabanas.png" alt="logo cabanas" />
 		</div>
 		<h3>
-			Cabañas en árboles te ayuda a saber la huella de carbono que se produce en
-			tus viajes
+			Una experiencia con impacto positivo: Calcula y compensa la huella de
+			carbono de tu viaje
 		</h3>
 		<div class="container">
 			<Form />
